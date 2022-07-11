@@ -68,9 +68,9 @@ const upload = (
   parentDir = 'LeetCode',
 ) => {
   // To validate user, load user object from GitHub.
-  const URL = `https://api.github.com/repos/${hook}/contents/${parentDir}/${directory}/${filename}`;
-
-  if (difficulty){
+  
+  var URL = `https://api.github.com/repos/${hook}/contents/${parentDir}/${directory}/${filename}`;
+  if (difficulty != ''){
     URL = `https://api.github.com/repos/${hook}/contents/${parentDir}/${difficulty}/${directory}/${filename}`;
   }
 
